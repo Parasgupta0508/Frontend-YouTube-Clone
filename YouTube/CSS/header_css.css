@@ -1,0 +1,199 @@
+/* fixed - sets style as per browser
+absolute - sets style as per page body
+absolute under relative - sets element style as per relative to that element that has relative rather than page body.Ex - header-right-notifications-icon-container-div and header-right-notifications-count-div */
+
+.header-div{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-bottom: 1px solid rgb(228,228,228);
+    z-index: 100;
+}
+
+.header-left-section-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-left-hamburger-menu-img{
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header-left-youtube-logo-img{
+    height: 20px;
+    cursor: pointer;
+}
+
+.header-middle-section-div{
+    margin-left: 70px;
+    margin-right: 30px;
+    max-width: 500px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.search-bar-input{
+    flex: 1;
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(192,192,192);
+    border-radius: 2px;
+    /* Inset is used to box shadow inner
+    1px - shadowheight 2px shadowwidth 3px blur */
+    box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
+    /* Helps in shrinking flex box as much as possible as internally it have min width limit set and width 0 resets it */
+    width: 0;
+}
+
+.header-middle-search-button{
+    height: 39.5px;
+    width: 66px;
+    border: 1px solid rgb(192,192,192);
+    background-color: rgb(240,240,240);
+    margin-left: 0px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header-middle-search-icon-img{
+    height: 25px;
+}
+
+.header-middle-voice-search-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(248,248,248);
+    cursor: pointer;
+}
+
+.header-middle-voice-search-icon-img{
+    height: 24px;
+}
+
+.header-middle-search-button,.header-middle-voice-search-button{
+    /* Negative margins insert and decrease the space */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-middle-search-button .tooltip,.header-middle-voice-search-button .tooltip{
+   position: absolute;
+   color: white;
+   background-color: gray;
+   padding: 4px 8px 4px 8px;
+   border-radius: 2px;
+   font-size: 12px;
+   bottom: -30px;
+   opacity: 0;
+   transition: opacity 0.15s;
+   /* After pointing to actual text search in tooltip , it will appear and to avoid this , we make poiner-event as none */
+   pointer-events: none;
+   /* This will prevent the text to not get wrapped into multiple lines but keep it into a single line and provides as much width needed */
+   white-space: nowrap;
+}
+
+.header-middle-search-button:hover .tooltip,.header-middle-voice-search-button:hover .tooltip{
+    opacity: 1;
+}
+
+.header-right-section-div{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    justify-content: space-between;
+    /* Prevents flex from shrinking while resizing */
+    flex-shrink: 0;
+}
+
+.header-right-upload-icon-container-div{
+    cursor: pointer;
+}
+
+.header-right-upload-icon-img{
+    height: 24px;
+}
+
+.heeader-right-youtube-apps-icon-container-div{
+    cursor: pointer;
+}
+
+.heeader-right-youtube-apps-icon-img{
+    height: 24px;
+}
+
+.header-right-notifications-icon-container-div{
+    position: relative;
+    cursor: pointer;
+}
+
+.header-right-notifications-icon-container-div{
+    cursor: pointer;
+}
+
+.header-right-notifications-icon-img{
+    height: 24px;
+}
+
+.header-right-notifications-count-div{
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background-color: rgb(200,0,0);
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+}
+
+.header-right-my-channel-container-div{
+    cursor: pointer;
+}
+
+.header-right-my-channel-img{
+    height: 32px;
+    border-radius: 16px;
+}
+
+.header-right-upload-icon-container-div,.heeader-right-youtube-apps-icon-container-div,.header-right-notifications-icon-container-div,.header-right-my-channel-container-div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-right-upload-icon-container-div .tooltip,.heeader-right-youtube-apps-icon-container-div .tooltip,.header-right-notifications-icon-container-div .tooltip,.header-right-my-channel-container-div .tooltip{
+    position: absolute;
+   color: white;
+   background-color: gray;
+   padding: 4px 8px 4px 8px;
+   border-radius: 2px;
+   font-size: 12px;
+   bottom: -30px;
+   opacity: 0;
+   transition: opacity 0.15s;
+   /* After pointing to actual text search in tooltip , it will appear and to avoid this , we make poiner-event as none */
+   pointer-events: none;
+   /* This will prevent the text to not get wrapped into multiple lines but keep it into a single line and provides as much width needed */
+   white-space: nowrap;
+}
+
+.header-right-upload-icon-container-div:hover .tooltip,.heeader-right-youtube-apps-icon-container-div:hover .tooltip,.header-right-notifications-icon-container-div:hover .tooltip,.header-right-my-channel-container-div:hover .tooltip{
+    opacity: 1;
+}
